@@ -1,11 +1,14 @@
+const Logger = require("./../util/Logger");
 const ROUTES = [
     "GeneralRoute.js"
 ];
 
-const Logger = require("./../util/Logger");
+function RouteIndex(app) {
+    for (let route of ROUTES) {
+        require("./" + route)(app);
+    }
 
-for (let route of ROUTES) {
-    require("./" + route);
+    Logger.log("All " + ROUTES.length + " loaded in successfully");
 }
 
-Logger.log("All " + ROUTES.length + " loaded in successfully");
+module.exports = RouteIndex;

@@ -23,7 +23,8 @@ process.on('uncaughtException', function (err) {
     console.log("-=- Node Critical Error End -=-");
 });
 
-require("./routes/index");
+require("./routes/index")(app);
+require("./tables/TableHandler")();
 
 app.listen(3001, function(){
     Logger.log("Commservus has started up successfully");

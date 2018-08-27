@@ -10,13 +10,14 @@ This is the server for the Commservus project!
 
 ## Installation
 1. Download and clone repo
-2. Open project in terminal and use `npm start`
-
+1. We use mysql so have something like xampp installed and turned on
+1. Open project in terminal and use `npm start`
 
 ## Codebase Etiquette
 * We like all basic javascript conventions (naming and all)
 * We use ES6 (let and const instead of var)
 * We comment our code when needed.  
+* We prefer early exits over multiple if/else blocks
 
 ## Workflow
 The workflow is quite easy. We have a slack and trello in which we 
