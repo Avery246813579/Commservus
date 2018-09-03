@@ -1,4 +1,4 @@
-const RouteHelper = require("./../helpers/RouteHelper");
+const RouteHelper = require("../helpers/RouteHelpers");
 
 function GeneralRoute(app) {
     /**
