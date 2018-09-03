@@ -25,8 +25,18 @@ function TableHandler() {
     }
 
     _Database.table([
-        /* Test Routes */
-        require('./general/Test')
+        /** Accounts */
+        require('./account/Accounts'),
+        require('./account/Passwords'),
+        require('./account/Info'),
+
+        /** Organizations */
+        require('./organization/Organizations'),
+        require('./organization/Organization_Members'),
+
+        /** Events */
+        require('./event/Events'),
+        require('./event/Event_Members')
     ]);
 }
 
