@@ -13,6 +13,7 @@ prototype.sendError = function (res, err, data) {
         success: false,
         message: error.MESSAGE,
         code: error.CODE,
+        error: err
     };
 
     if (typeof data !== "undefined") {

@@ -2,7 +2,7 @@
   "name": "Commservus",
   "version": "0.0.1",
   "scripts": {
-    "test": "mocha server-test",
+    "test": "mocha test",
     "start": "node src/index.js"
   },
   "dependencies": {
