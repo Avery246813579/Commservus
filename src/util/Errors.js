@@ -19,3 +19,13 @@ prototype.BODY_ARGUMENT_INVALID_LENGTH = {
     MESSAGE: "An argument is not a specific length",
     CODE: 4
 };
+
+prototype.ACCOUNT_USERNAME_TAKEN = {
+    MESSAGE: "That username was taken",
+    CODE: 5
+};
+
+prototype.ACCOUNT_EMAIL_TAKEN = {
+    MESSAGE: "That email was taken",
+    CODE: 6
+};
