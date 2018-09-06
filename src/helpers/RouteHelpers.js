@@ -13,6 +13,7 @@ prototype.sendError = function (res, err, data) {
         success: false,
         message: error.MESSAGE,
         code: error.CODE,
+        error: err
     };
 
     if (typeof data !== "undefined") {
@@ -44,7 +45,7 @@ prototype.sendSuccess = function (res, data) {
  * @param info      Info we want to check on
  * @param content   Can change the dict we are looking at
  */
-prototype.checkVariables = function (req, info, content) {
+prototype.checkVariables = function (req, res, info, content) {
     let body = req.body;
 
     if (typeof content !== "undefined") {
