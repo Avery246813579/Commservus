@@ -2,11 +2,23 @@
 const RouteHelper = require("../helpers/RouteHelpers");
 const AccountHelpers = require("../helpers/AccountHelpers");
 
+// Validators
+const validateSignupInput = require('../validation/signup');
+
 function AccountRoute(app) {
     /**
      * Create an account
      */
     app.post("/signup", function (req, res) {
+        const { errors, isValid } = validateSignupInput(req.body);
+
+        // Check validation
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
+
+        console.log(`Errors: ${errors} - isValid: ${isValid}`);
+
         if (!RouteHelper.checkVariables(req, res, {
                 FIRST_NAME: {MIN: 1, MAX: 35},
                 LAST_NAME: {MIN: 1, MAX: 35},
