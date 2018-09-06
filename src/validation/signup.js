@@ -22,6 +22,10 @@ module.exports = function validateSignupInput (data) {
     errors.username = 'Username must be between 4 and 16 characters';
   }
 
+  if (Validator.isNumeric(data.username, { no_symbols: false })) {
+    errots.username = 'Use only letters, numbers, and underscores.';
+  }
+
   if (Validator.isEmpty(data.firstName)) {
     errors.firstName = 'First name field is required';
   }
