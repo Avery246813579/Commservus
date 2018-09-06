@@ -23,7 +23,7 @@ module.exports = function validateSignupInput (data) {
   }
 
   if (Validator.isNumeric(data.username, { no_symbols: false })) {
-    errots.username = 'Use only letters, numbers, and underscores.';
+    errors.username = 'Use only letters, numbers, and underscores.';
   }
 
   if (Validator.isEmpty(data.firstName)) {
